@@ -14,7 +14,13 @@
 
 @section('content2')
     @foreach($comics as $comic)
-        {{$comic['title']}} - {{$comic['price']}} - {{$comic['series']}} - {{$comic['sale_date']}} - {{$comic['type']}}
+        {{$comic['title']}} - {{$comic['price']}} - {{$comic['series']}} - {{$comic['sale_date']}} - {{$comic['type']}} 
+
+        
+        {{$comic['artists'][0]}} 
         <br/>
+        {{$comic['writers'][0]}}
+        <br/>
+        <img src="{{$comic['thumb']}}" alt="">
     @endforeach
 @endsection
